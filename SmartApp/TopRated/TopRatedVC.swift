@@ -99,7 +99,7 @@ class TopRatedVC: BaseViewController {
           let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: UIAlertController.Style.alert)
           
           alert.addAction(UIAlertAction(title: "Delete", style: UIAlertAction.Style.default, handler: { action in
-            self.movieList.remove(at: index)
+            self.filteredMovielist.remove(at: index)
             self.collectionView.deleteItems(at: [IndexPath.init(row: index, section: 0)])
               alert.dismiss(animated: true, completion: nil)
           }))
